@@ -6,7 +6,6 @@ The platform ensures that surplus food reaches people in need **before it expire
 > **“No food should become waste when someone needs it.”**
 
 ---
-
 ## 📌 Table of Contents
 1. Introduction  
 2. Problem Statement  
