@@ -1,142 +1,3 @@
-// export const foodClaimedOwnerTemplate = ({ food, ngo, restaurant }) => {
-//   return `
-//   <table width="100%" cellpadding="0" cellspacing="0" style="background:#667eea;padding:20px;">
-//     <tr>
-//       <td align="center">
-//         <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden;">
-          
-//           <tr>
-//             <td style="background:#1e3a8a;color:#ffffff;padding:24px;text-align:center;">
-//               <div style="font-size:48px;">🎉</div>
-//               <h2 style="margin:10px 0;font-size:24px;">Your Food Was Claimed!</h2>
-//               <p style="margin:0;font-size:14px;">Making a difference, one meal at a time</p>
-//             </td>
-//           </tr>
-
-//           <tr>
-//             <td style="padding:20px;font-size:14px;color:#1f2937;">
-//               <p>Hello <b>${restaurant.name}</b>,</p>
-//               <p>Your food donation was claimed by <b>${ngo.name}</b>. Thank you for your generosity!</p>
-
-//               <table width="100%" style="background:#f0fdf4;border-radius:12px;padding:16px;">
-//                 <tr><td><b>🍽 Food:</b> ${food.food_name}</td></tr>
-//                 <tr><td><b>📦 Quantity:</b> ${food.quantity}</td></tr>
-//                 <tr><td><b>⏰ Expiry:</b> ${new Date(food.expiry_time).toLocaleString()}</td></tr>
-//               </table>
-
-//               <img src="${food.food_image?.[0]?.url}" style="width:100%;height:auto;border-radius:12px;margin:16px 0;" />
-
-//               <a href="https://www.google.com/maps?q=${food.location.coordinates[1]},${food.location.coordinates[0]}"
-//                 style="display:block;width:100%;text-align:center;background:#22c55e;color:#ffffff;padding:14px;border-radius:10px;text-decoration:none;font-weight:bold;">
-//                 📍 View Pickup Location
-//               </a>
-//             </td>
-//           </tr>
-
-//           <tr>
-//             <td style="background:#f1f5f9;padding:16px;text-align:center;font-size:13px;color:#64748b;">
-//               <b>ResQFood</b><br/>Saving Food, Serving Hope 🌱
-//             </td>
-//           </tr>
-
-//         </table>
-//       </td>
-//     </tr>
-//   </table>
-//   `;
-// };
-// export const foodClaimedNgoTemplate = ({ food, restaurant }) => {
-//   return `
-//   <table width="100%" cellpadding="0" cellspacing="0" style="background:#10b981;padding:20px;">
-//     <tr>
-//       <td align="center">
-//         <table width="100%" style="max-width:600px;background:#ffffff;border-radius:16px;">
-          
-//           <tr>
-//             <td style="background:#16a34a;color:#fff;padding:24px;text-align:center;">
-//               <div style="font-size:48px;">✅</div>
-//               <h2 style="margin:10px 0;font-size:24px;">Food Claimed Successfully</h2>
-//             </td>
-//           </tr>
-
-//           <tr>
-//             <td style="padding:20px;font-size:14px;">
-//               <p><b>Food:</b> ${food.food_name}</p>
-//               <p><b>Quantity:</b> ${food.quantity}</p>
-//               <p><b>Donor:</b> ${restaurant.name}</p>
-//               <p><b>Collect Before:</b> ${new Date(food.expiry_time).toLocaleString()}</p>
-
-//               <img src="${food.food_image?.[0]?.url}" style="width:100%;height:auto;border-radius:12px;margin:16px 0;" />
-
-//               <a href="https://www.google.com/maps?q=${food.location.coordinates[1]},${food.location.coordinates[0]}"
-//                 style="display:block;width:100%;text-align:center;background:#16a34a;color:#ffffff;padding:14px;border-radius:10px;text-decoration:none;font-weight:bold;">
-//                 📍 Navigate to Pickup Location
-//               </a>
-//             </td>
-//           </tr>
-
-//         </table>
-//       </td>
-//     </tr>
-//   </table>
-//   `;
-// };
-// export const foodCollectedNgoTemplate = ({ food, restaurant }) => {
-//   return `
-//   <table width="100%" cellpadding="0" cellspacing="0" style="background:#22c55e;padding:20px;">
-//     <tr>
-//       <td align="center">
-//         <table width="100%" style="max-width:600px;background:#ffffff;border-radius:16px;">
-          
-//           <tr>
-//             <td style="background:#16a34a;color:#fff;padding:24px;text-align:center;">
-//               <div style="font-size:48px;">🌟</div>
-//               <h2 style="margin:10px 0;">Mission Accomplished!</h2>
-//             </td>
-//           </tr>
-
-//           <tr>
-//             <td style="padding:20px;text-align:center;font-size:14px;">
-//               <p>You collected <b>${food.food_name}</b> from <b>${restaurant.name}</b>.</p>
-//               <p>Thank you for making a difference ❤️</p>
-//             </td>
-//           </tr>
-
-//         </table>
-//       </td>
-//     </tr>
-//   </table>
-//   `;
-// };
-// export const foodCollectedOwnerTemplate = ({ food, ngo }) => {
-//   return `
-//   <table width="100%" cellpadding="0" cellspacing="0" style="background:#3b82f6;padding:20px;">
-//     <tr>
-//       <td align="center">
-//         <table width="100%" style="max-width:600px;background:#ffffff;border-radius:16px;">
-          
-//           <tr>
-//             <td style="background:#1e3a8a;color:#fff;padding:24px;text-align:center;">
-//               <div style="font-size:48px;">🎊</div>
-//               <h2 style="margin:10px 0;">Donation Complete</h2>
-//             </td>
-//           </tr>
-
-//           <tr>
-//             <td style="padding:20px;font-size:14px;text-align:center;">
-//               <p>Your food <b>${food.food_name}</b> was collected by:</p>
-//               <p><b>${ngo.name}</b></p>
-//               <p>Thank you for helping reduce food waste 🌱</p>
-//             </td>
-//           </tr>
-
-//         </table>
-//       </td>
-//     </tr>
-//   </table>
-//   `;
-// };
-
 export const foodClaimedOwnerTemplate = ({ food, ngo, restaurant }) => {
   return `
   <div style="font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 20px;">
@@ -205,7 +66,7 @@ export const foodClaimedOwnerTemplate = ({ food, ngo, restaurant }) => {
         <!-- Thank You Message -->
         <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 16px; padding: 25px; margin: 25px 0; text-align: center; border: 2px solid #fbbf24;">
           <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #78350f;">
-            <b style="font-size: 18px; display: block; margin-bottom: 10px;">🙏 Thank You!</b>
+            <b style="font-size: 18px; display: block; margin-bottom: 10px;">Thank You!</b>
             Your generosity helps reduce food waste and supports people in need.
             Together, we're building a better, more sustainable world. ❤️
           </p>
@@ -223,8 +84,8 @@ export const foodClaimedOwnerTemplate = ({ food, ngo, restaurant }) => {
 
       <!-- Footer -->
       <div style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); padding: 30px; text-align: center;">
-        <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 20px; font-weight: 700;">
-          🌱 ResQFood
+        <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 20px; font-weight: 700;"> 🌱
+          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff" > ResQFood</a>
         </h3>
         <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.6;">
           Saving Food, Serving Hope 🌍<br/>
@@ -321,7 +182,7 @@ export const foodClaimedNgoTemplate = ({ food, restaurant }) => {
           🦸 You're a Hero!
         </h3>
         <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.6;">
-          Thank you for being part of ResQFood 🙏<br/>
+          Thank you for being part of <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff" >ResQFood</a><br/>
           <span style="font-size: 12px;">Together, we're saving food and serving hope</span>
         </p>
       </div>
@@ -352,7 +213,7 @@ export const foodCollectedNgoTemplate = ({ food, restaurant }) => {
       <div style="padding: 50px 40px; color: #1f2937; text-align: center;">
         
         <!-- Success Badge -->
-        <div style="display: inline-block; background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 3px solid #22c55e; border-radius: 50%; width: 100px; height: 100px; margin: 0 auto 30px auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);">
+        <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 3px solid #22c55e; border-radius: 50%; width: 100px; height: 100px; margin: 0 auto 30px auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);">
           <span style="font-size: 50px;">✓</span>
         </div>
 
@@ -397,7 +258,7 @@ export const foodCollectedNgoTemplate = ({ food, restaurant }) => {
       <div style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); padding: 35px; text-align: center;">
         <div style="font-size: 40px; margin-bottom: 15px;">🌱</div>
         <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 22px; font-weight: 700;">
-          ResQFood Community
+          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff" >ResQFood </a>Community
         </h3>
         <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.8;">
           Together, we're building a world with less waste and more compassion 🌍<br/>
@@ -427,7 +288,7 @@ export const foodCollectedOwnerTemplate = ({ food, ngo }) => {
         
         <!-- Success Icon -->
         <div style="text-align: center; margin-bottom: 35px;">
-          <div style="display: inline-block; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2); margin: 0 auto;">
+          <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2); margin: 0 auto;">
             <span style="font-size: 50px;">✅</span>
           </div>
         </div>
@@ -482,7 +343,7 @@ export const foodCollectedOwnerTemplate = ({ food, ngo }) => {
       <div style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); padding: 35px; text-align: center;">
         <div style="font-size: 40px; margin-bottom: 15px;">🌱</div>
         <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 22px; font-weight: 700;">
-          ResQFood
+          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff" >ResQFood</a>
         </h3>
         <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.8;">
           Saving Food, Serving Hope 🌍<br/>
