@@ -85,7 +85,7 @@ export const foodClaimedOwnerTemplate = ({ food, ngo, restaurant }) => {
       <!-- Footer -->
       <div style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); padding: 30px; text-align: center;">
         <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 20px; font-weight: 700;"> 🌱
-          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff" > ResQFood</a>
+          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff text-decoration:none" > ResQFood</a>
         </h3>
         <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.6;">
           Saving Food, Serving Hope 🌍<br/>
@@ -182,7 +182,7 @@ export const foodClaimedNgoTemplate = ({ food, restaurant }) => {
           🦸 You're a Hero!
         </h3>
         <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.6;">
-          Thank you for being part of <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff" >ResQFood</a><br/>
+          Thank you for being part of <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff text-decoration:none" >ResQFood</a><br/>
           <span style="font-size: 12px;">Together, we're saving food and serving hope</span>
         </p>
       </div>
@@ -258,7 +258,7 @@ export const foodCollectedNgoTemplate = ({ food, restaurant }) => {
       <div style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); padding: 35px; text-align: center;">
         <div style="font-size: 40px; margin-bottom: 15px;">🌱</div>
         <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 22px; font-weight: 700;">
-          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff" >ResQFood </a>Community
+          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff text-decoration:none" >ResQFood </a>Community
         </h3>
         <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.8;">
           Together, we're building a world with less waste and more compassion 🌍<br/>
@@ -343,7 +343,7 @@ export const foodCollectedOwnerTemplate = ({ food, ngo }) => {
       <div style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); padding: 35px; text-align: center;">
         <div style="font-size: 40px; margin-bottom: 15px;">🌱</div>
         <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 22px; font-weight: 700;">
-          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff" >ResQFood</a>
+          <a href = "https://resqfood-cc.vercel.app" style="color: #93c10aff text-decoration:none" >ResQFood</a>
         </h3>
         <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.8;">
           Saving Food, Serving Hope 🌍<br/>
