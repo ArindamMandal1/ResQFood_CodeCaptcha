@@ -10,7 +10,7 @@ const ClaimedCard = ({ food = {}, refresh }) => {
     collected: "text-gray-500",
     expired: "text-red-600",
   };
-
+  
   const color = statusColor[status] || "text-gray-500";
 
   const handleCollect = async () => {
