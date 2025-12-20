@@ -190,7 +190,7 @@ const MapView = () => {
     socket.on("food_unavailable", onFoodUnavailable);
     socket.on("food_expired", onFoodExpired);
 
-    console.log("MapView socket listeners attached");
+    
 
     return () => {
       socket.off("new_food_post", onNewFood);
@@ -198,7 +198,7 @@ const MapView = () => {
       socket.off("post_deleted", onPostDeleted);
       socket.off("food_unavailable", onFoodUnavailable);
       socket.off("food_expired", onFoodExpired);
-      console.log("MapView socket listeners removed");
+      
     };
   }, []);
 
