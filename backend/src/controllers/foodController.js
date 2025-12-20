@@ -87,7 +87,7 @@ export const createFood = async (req, res) => {
       food_image: post.food_image,
       restaurantId: post.restaurantId,
     });
-    console.log("📡 Emitted: new_food_post");
+   
 
     res.status(200).json({ success: true, message: "Notification sent", post });
   } catch (error) {
@@ -175,7 +175,7 @@ export const claimFood = async (req, res) => {
         ngoId: ngo._id,
         restaurantId: restaurant._id,
       });
-      console.log("📡 Emitted: food_claimed_owner");
+      
 
       io.emit("food_claimed_ngo", {
         foodId: post._id,
@@ -184,13 +184,12 @@ export const claimFood = async (req, res) => {
         restaurantName: restaurant.name,
         restaurantId: restaurant._id,
       });
-      console.log("📡 Emitted: food_claimed_ngo");
+      
 
       io.emit("food_unavailable", {
         foodId: post._id,
       });
-      console.log("📡 Emitted: food_unavailable");
-
+      
     res.json({ success: true, post });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -236,8 +235,7 @@ export const markCollected = async (req, res) => {
     const food = await FoodPost.findById(foodId);
     if (!food) return res.status(404).json({ success: false, message: "Food not found" });
     const restaurant = await User.findById(food.restaurantId);
-    console.log("claimedBy:", food.claimedBy?.toString());
-    console.log("ngoId:", ngoId);
+    
 
     if (!food.claimedBy || food.claimedBy.toString() !== ngoId.toString())
       return res.status(403).json({ error: "Unauthorized" });
@@ -285,7 +283,7 @@ export const markCollected = async (req, res) => {
         ngoId: ngo._id,
         restaurantId: restaurant._id,
       });
-      console.log("📡 Emitted: food_collected_owner");
+     
 
       io.emit("food_collected_ngo", {
         foodId: food._id,
@@ -294,13 +292,12 @@ export const markCollected = async (req, res) => {
         restaurantName: restaurant.name,
         restaurantId: restaurant._id,
       });
-      console.log("📡 Emitted: food_collected_ngo");
+      
 
       io.emit("food_unavailable", {
         foodId: food._id,
       });
-      console.log("📡 Emitted: food_unavailable");
-
+     
     res.json({ success: true, message: "Food marked as collected" });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
